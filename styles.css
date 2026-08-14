@@ -41,8 +41,8 @@ h1,h2,h3{font-family:var(--font-head);font-weight:700;letter-spacing:.01em}
 .gf-nav-row{min-height:76px;display:flex;align-items:center;gap:22px}
 .gf-brand{display:flex;align-items:center;gap:11px}
 .gf-brand-ic{width:38px;height:38px;flex:none}
-.gf-brand-word{font-family:var(--font-head);font-weight:800;font-size:19px;color:#fff;letter-spacing:.02em}
-.gf-brand-word span{color:var(--red)}
+.gf-brand-word{font-family:var(--font-head);font-weight:800;font-size:19px;color:var(--red);letter-spacing:.02em}
+.gf-brand-word span{color:#fff}
 .gf-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
 .gf-nav-item{position:relative}
 .gf-nav-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#c6c6d0;padding:10px 13px;border-radius:6px;border:0;background:transparent;font-family:var(--font-body);cursor:pointer;transition:.2s}
@@ -268,8 +268,9 @@ details[open] .gf-faq-ic:after{transform:translate(-50%,-50%) scaleY(0)}
 .gf-footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px}
 .gf-footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .gf-footer-logo-ic{width:32px;height:32px}
-.gf-footer-logo-word{font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;white-space:nowrap}
-.gf-footer-logo-word span{color:var(--red)}
+.gf-footer-logo-word{font-family:var(--font-head);font-weight:800;font-size:17px;color:var(--red);white-space:nowrap}
+.gf-footer-logo .gf-footer-logo-word,.gf-footer-logo .gf-footer-logo-word span{display:inline;margin:0}
+.gf-footer-logo-word span{color:#fff}
 .gf-footer-grid h3{color:#fff;font-size:14px;text-transform:uppercase}
 .gf-footer-grid a,.gf-footer-grid span{display:block;margin:8px 0;font-size:13.5px;font-family:var(--font-body)}
 .gf-footer-grid a:hover{color:var(--red-light)}
