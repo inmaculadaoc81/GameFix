@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F4F6"/>
+      <stop offset="1" stop-color="#E7E7EC"/>
+    </linearGradient>
+    <linearGradient id="consoleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2C2C36"/>
+      <stop offset="1" stop-color="#111116"/>
+    </linearGradient>
+    <linearGradient id="consoleTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3A46"/>
+      <stop offset="1" stop-color="#25252E"/>
+    </linearGradient>
+    <linearGradient id="redGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0342A"/>
+      <stop offset="1" stop-color="#B4130C"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bgGrad1)"/>
+  <circle cx="960" cy="170" r="230" fill="#DEDEE4"/>
+  <rect x="110" y="610" width="980" height="16" rx="6" fill="#D7D7DE"/>
+
+  <!-- console (top-down slim tower) -->
+  <g filter="url(#soft)">
+    <rect x="430" y="230" width="150" height="330" rx="18" fill="url(#consoleGrad)" stroke="#3A3A46" stroke-width="2"/>
+    <rect x="430" y="230" width="150" height="60" rx="18" fill="url(#consoleTop)"/>
+    <rect x="452" y="252" width="106" height="16" rx="6" fill="#0A0A0D"/>
+    <circle cx="505" cy="320" r="9" fill="url(#redGrad2)"/>
+    <rect x="452" y="350" width="106" height="130" rx="10" fill="#0A0A0D"/>
+    <path d="M470 435 L495 405 L515 425 L545 385" fill="none" stroke="url(#redGrad2)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="460" y="498" width="90" height="8" rx="4" fill="#3A3A46"/>
+    <rect x="460" y="516" width="60" height="8" rx="4" fill="#3A3A46"/>
+    <rect x="460" y="534" width="76" height="8" rx="4" fill="#3A3A46"/>
+  </g>
+
+  <!-- controller resting beside console -->
+  <g filter="url(#soft)" transform="translate(700,430)">
+    <path d="M35 0
+             C 8 0, -18 26, -18 78
+             L -18 164
+             C -18 216, 26 250, 65 224
+             C 82 212, 94 188, 98 166
+             C 102 188, 114 212, 131 224
+             C 170 250, 214 216, 214 164
+             L 214 78
+             C 214 26, 188 0, 161 0
+             Z" fill="url(#consoleGrad)" stroke="#3A3A46" stroke-width="2"/>
+    <line x1="48" y1="82" x2="48" y2="126" stroke="#5b5b66" stroke-width="12" stroke-linecap="round"/>
+    <line x1="26" y1="104" x2="70" y2="104" stroke="#5b5b66" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="153" cy="82" r="11" fill="url(#redGrad2)"/>
+    <circle cx="153" cy="122" r="11" fill="#3A3A46"/>
+    <circle cx="133" cy="102" r="11" fill="#3A3A46"/>
+    <circle cx="173" cy="102" r="11" fill="#3A3A46"/>
+  </g>
+
+  <!-- screwdriver crossing the console -->
+  <g filter="url(#soft)" transform="translate(300,470) rotate(-22)">
+    <rect x="0" y="0" width="150" height="18" rx="7" fill="#8a8a95"/>
+    <rect x="148" y="-9" width="42" height="36" rx="9" fill="url(#redGrad2)"/>
+  </g>
+
+  <!-- wrench -->
+  <g filter="url(#soft)" transform="translate(360,560) rotate(14)">
+    <rect x="0" y="0" width="140" height="24" rx="7" fill="#8a8a95"/>
+    <circle cx="150" cy="12" r="30" fill="none" stroke="#8a8a95" stroke-width="22"/>
+  </g>
+
+  <!-- floating accents -->
+  <circle cx="240" cy="300" r="6" fill="url(#redGrad2)"/>
+  <circle cx="960" cy="560" r="8" fill="url(#redGrad2)"/>
+  <circle cx="270" cy="380" r="4" fill="#B7B7C0"/>
+  <circle cx="960" cy="300" r="5" fill="#B7B7C0"/>
+</svg>
