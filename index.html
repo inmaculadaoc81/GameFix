@@ -18,14 +18,16 @@
 <header class="header">
 <div class="wrap nav">
   <a href="#inicio"><img class="logo" src="/assets/logo-gamefix.png" alt="GameFix Servicio Técnico Consolas y videojuegos"></a>
-  <nav class="links">
+  <nav class="links" id="mainMenu">
     <a href="#consolas">Consolas</a>
     <a href="#problemas">Qué le pasa</a>
     <a href="#revision">Qué revisamos</a>
     <a href="#cita">Pedir cita</a>
+    <a href="#sobre-reparacion">Guía</a>
     <a href="#contacto">Contacto</a>
     <a class="navcall" href="tel:+34914468503">Atención Telefónica 24 horas 365 días</a>
   </nav>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainMenu">Menú</button>
 </div>
 </header>
 
@@ -184,6 +186,23 @@
 </div>
 </section>
 
+<section class="seo-content" id="sobre-reparacion">
+<div class="wrap">
+  <div class="kicker">Reparación de consolas y mandos en Madrid</div>
+  <h2 class="title">Antes de comprar una consola nueva, revisa si la tuya tiene arreglo</h2>
+
+  <div class="seo-text">
+    <p>Una consola que no enciende, que no da imagen o que se apaga sola no siempre está para tirar. En PlayStation, Xbox y Nintendo Switch, la mayoría de averías están relacionadas con un número reducido de causas —alimentación, HDMI, temperatura, lector o almacenamiento— y buena parte tienen solución sin sustituir la consola completa. Lo mismo ocurre con los mandos: el "drift" de los joysticks, botones que no responden o problemas de carga suelen deberse a desgaste mecánico o a la batería, no a un fallo irreparable.</p>
+
+    <p>En <strong>GameFix</strong> trabajamos con PlayStation 3, PS4, PS5, Xbox 360, Xbox One, Xbox Series X, Series S y Nintendo Switch, además de mandos de todas ellas. El diagnóstico es gratuito: revisamos HDMI e imagen, alimentación, temperatura y ventilación, almacenamiento y arranque, y el estado de joysticks, botones y gatillos, para explicarte con claridad qué le ocurre a tu consola antes de que decidas si merece la pena repararla.</p>
+
+    <p>Si no quieres desplazarte, puedes solicitar recogida desde esta misma página. Cuéntanos qué hace la consola o el mando, desde cuándo ocurre y para cuándo la necesitas.</p>
+
+    <p><small>GameFix es un servicio técnico independiente. PlayStation, Xbox y Nintendo Switch son marcas registradas de sus respectivos titulares; no somos servicio técnico oficial de ninguna de ellas.</small></p>
+  </div>
+</div>
+</section>
+
 <section class="faq">
 <div class="wrap">
   <div class="kicker">Preguntas frecuentes</div>
@@ -279,7 +298,7 @@ createChat({
  const apply=()=>{
    const root=document.querySelector('#n8n-chat'); if(!root)return;
    const t=root.querySelector('.chat-window-toggle,[class*="chat-window-toggle"]');
-   const w=root.querySelector('.chat-window,[class*="chat-window"]');
+   const w=root.querySelector('.chat-window:not([class*="toggle"]),[class*="chat-window"]:not([class*="toggle"])');
    const mobile=matchMedia('(max-width:600px)').matches;
 
    if(t){
@@ -287,6 +306,7 @@ createChat({
      t.style.setProperty('right',mobile?'16px':'22px','important');
      t.style.setProperty('bottom','96px','important');
      t.style.setProperty('z-index','10060','important');
+     t.style.setProperty('border','1px solid #fff','important');
    }
 
    if(w){
@@ -311,6 +331,17 @@ createChat({
  };
  boot();
 })();
+
+const menuBtn=document.getElementById('menuBtn');
+const mainMenu=document.getElementById('mainMenu');
+menuBtn?.addEventListener('click',()=>{
+  const open=mainMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+mainMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  mainMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+}));
 
 const form=document.getElementById('contact-form');
 const statusEl=document.getElementById('form-status');
