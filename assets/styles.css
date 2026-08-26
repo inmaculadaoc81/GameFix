@@ -24,7 +24,7 @@ a{text-decoration:none;color:inherit}
 .links{display:flex;gap:16px;align-items:center;color:#fff;font-size:13px;font-weight:850}
 .links a{white-space:nowrap}
 .links a:hover{color:#ff4b55}
-.navcall{padding:11px 16px;border-radius:999px;background:var(--red);color:#fff!important}
+.navcall{padding:11px 16px;border-radius:999px;background:var(--red);color:#fff!important;white-space:nowrap}
 .menu-btn{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:11px;padding:10px 14px;font-weight:900;font:inherit;cursor:pointer}
 
 /* Hero */
@@ -61,7 +61,7 @@ a{text-decoration:none;color:inherit}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:54px;align-items:start}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#ff5560;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .eyebrow::before{content:"";width:34px;height:4px;border-radius:99px;background:var(--red)}
-h1{font-size:clamp(38px,4.35vw,57px);line-height:1.02;letter-spacing:-2.25px;margin:0 0 24px;max-width:810px;color:#fff}
+h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margin:0 0 24px;max-width:810px;color:#fff}
 .accent{color:#ff3944}
 .diag{display:inline-flex;align-items:center;gap:11px;padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;font-weight:900}
 .diag span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff}
@@ -173,7 +173,7 @@ footer{background:#090a0d;color:#fff;padding:34px 0}
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
   .hero{padding-top:48px}
-  h1{font-size:40px;letter-spacing:-1.5px}
+  h1{font-size:48px;letter-spacing:-1.5px}
   .ctas,.problem-grid,.steps-grid,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
   .console-grid{grid-template-columns:repeat(2,1fr)}
